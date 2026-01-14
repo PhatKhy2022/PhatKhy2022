@@ -1,16 +1,39 @@
-## Hi there 👋
+# Hi there, I'm Khy 👋
 
-<!--
-**PhatKhy2022/PhatKhy2022** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### 👨‍💻 Software Engineer & Final Year CS Student
 
-Here are some ideas to get you started:
+I’m a bridge-builder between the academic world and the professional industry. Currently, I balance my time between finishing my degree and solving real-world problems as a Software Engineer.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### 🚀 Quick Overview
+
+- 🔭 **Working as:** Software Engineer (focusing on full-stack solutions).
+- 🌱 **Learning:** Currently in my **4th year** of University, diving deep into advanced architectures.
+- 👯 **Collaboration:** I'm looking to join open-source projects or side-hustles involving **Vue.js** or **DevOps**.
+- 🤔 **Help Needed:** Always looking to level up in **ColdFusion** optimization and **Cloud Infrastructure (DevOps)**.
+- 💬 **Ask me about:** Transitioning from student to engineer, or why I actually enjoy working with legacy and modern stacks simultaneously.
+
+---
+
+### 🛠 Tech Stack & Tools
+
+| Category | Technologies |
+| :--- | :--- |
+| **Frontend** | Vue.js, JavaScript (ES6+), HTML5, CSS3, Tailwind |
+| **Backend** | ColdFusion, Node.js, Python |
+| **DevOps** | Docker, Git, CI/CD, Linux |
+| **Database** | MySQL, PostgreSQL, Redis |
+
+
+
+### ⚡ Fun Facts & Philosophy
+
+- **The Debugger's Paradox:** I once spent 3 hours debugging a logic error, only to realize I missed a semicolon. 🤦‍♂️
+- **Coffee Logic:** I turn caffeine into code, though sometimes the compiler disagrees with the recipe.
+- **Perspective:** I believe "Legacy Code" is just "Code that actually makes money."
+
+---
+
+---
+*“Done is better than perfect, but clean code is a close second.”*
