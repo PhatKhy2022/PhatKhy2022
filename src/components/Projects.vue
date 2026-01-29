@@ -13,7 +13,7 @@ const projects = [
     title: 'Logistics Mobile Solution',
     desc: 'Cross-platform mobile application for real-time asset tracking and fleet management via Taffy REST APIs.',
     image: p2,
-    tags: ['Ionic Framework', 'Node.js', 'Taffy', 'GKE']
+    tags: ['Ionic Framework', 'Node.js', 'Taffy']
   }
 ];
 </script>

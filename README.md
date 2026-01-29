@@ -29,7 +29,7 @@ I am a strategic-thinking Software Engineer with a mastery of enterprise ecosyst
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
 
 **Cloud & DevOps**
-![GKE](https://img.shields.io/badge/Google_Kubernetes_Engine-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
+
 ![CI/CD](https://img.shields.io/badge/CI/CD-FF6B6B?style=for-the-badge&logo=git&logoColor=white)
 
 ---

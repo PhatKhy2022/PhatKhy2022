@@ -5,7 +5,7 @@ const skills = [
   { name: 'Frontend & UI', icon: Layout, items: ['Vue.js', 'Adobe ColdFusion', 'Ionic Framework', 'FW/1', 'TypeScript', 'JavaScript', 'HTML5/CSS', 'Bootstrap', 'WordPress'] },
   { name: 'Backend Mastery', icon: Server, items: ['Node.js', 'PHP', 'Laravel', 'Adobe ColdFusion', 'C#', 'Java', 'FW/1', 'Taffy'] },
   { name: 'Mobile Development', icon: Smartphone, items: ['Android App Dev', 'iOS App Dev', 'Ionic Framework'] },
-  { name: 'Cloud & Infrastructure', icon: Database, items: ['Google Kubernetes Engine', 'SQL', 'MariaDB', 'Jasper Reports'] },
+  { name: 'Cloud & Infrastructure', icon: Database, items: ['SQL', 'MariaDB', 'Jasper Reports'] },
   { name: 'Software Engineering', icon: Cpu, items: ['System Analysis & Design', 'Software Project Management'] }
 ];
 </script>
