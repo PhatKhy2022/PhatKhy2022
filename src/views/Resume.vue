@@ -74,7 +74,7 @@ const printResume = () => {
               </div>
               <div class="contact-card">
                 <Globe :size="16" class="icon-accent" />
-                <span>https://khy-portfolio.vercel.app</span>
+                <span>https://khy-phat-portfolio.vercel.app</span>
               </div>
               <div class="contact-card">
                 <Linkedin :size="16" class="icon-accent" />
