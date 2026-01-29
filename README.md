@@ -25,7 +25,8 @@ I am a strategic-thinking Software Engineer with a mastery of enterprise ecosyst
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Adobe ColdFusion](https://img.shields.io/badge/ColdFusion-000000?style=for-the-badge&logo=adobe&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-008080?style=for-the-badge&logo=mysql&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
 
 **Cloud & DevOps**
 ![GKE](https://img.shields.io/badge/Google_Kubernetes_Engine-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)

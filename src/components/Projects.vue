@@ -7,7 +7,7 @@ const projects = [
     title: 'Enterprise ERP System',
     desc: 'Scalable business management platform featuring real-time financial tracking and automated Jasper Reports integration.',
     image: p1,
-    tags: ['Adobe ColdFusion', 'Vue.js', 'Jasper Reports', 'SQL']
+    tags: ['Adobe ColdFusion', 'Vue.js', 'Jasper Reports', 'SQL', 'MariaDB']
   },
   {
     title: 'Logistics Mobile Solution',

@@ -4,7 +4,7 @@ import { Mail, MapPin, Globe, Linkedin, Printer, ChevronLeft } from 'lucide-vue-
 const skills = [
   { category: 'Frontend', items: ['Vue.js', 'Adobe ColdFusion', 'Ionic Framework', 'FW/1', 'TypeScript', 'JavaScript', 'HTML5/CSS', 'Bootstrap', 'WordPress'] },
   { category: 'Backend', items: ['Node.js', 'PHP', 'Laravel', 'Adobe ColdFusion', 'C#', 'Java', 'FW/1', 'Taffy'] },
-  { category: 'Mobile & Cloud', items: ['Android/iOS', 'Ionic', 'Google Kubernetes Engine', 'SQL', 'Jasper Reports'] },
+  { category: 'Mobile & Cloud', items: ['Android/iOS', 'Ionic', 'Google Kubernetes Engine', 'SQL', 'MariaDB', 'Jasper Reports'] },
   { category: 'Engineering', items: ['System Analysis', 'Software PM', 'Git', 'CI/CD'] }
 ];
 
