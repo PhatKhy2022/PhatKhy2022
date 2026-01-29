@@ -1,13 +1,13 @@
 # 👋 Hi, I'm Khy Phat
 
-### Full-Stack Software Engineer | Final Year CS Student | Enterprise Solutions & Mobile Architecture
+### Full-Stack Software Engineer | Final Year CS Student | Enterprise Solutions & Responsive Design
 
 I am a strategic-thinking Software Engineer with a mastery of enterprise ecosystems. I specialize in bridging the gap between complex backend architectures (Node.js, ColdFusion) and intuitive, performant frontends (Vue, Ionic). Currently, I balance my time between finishing my degree and solving real-world problems.
 
 ---
 
 ### 🚀 Quick Overview
-- 🌱 **Learning:** Finishing my **4th year** of University, diving deep into advanced architectures.
+- 🌱 **Learning:** Completing my Bachelor's degree (**2023 - 2025**), diving deep into advanced architectures.
 - 👯 **Collaboration:** Looking to join open-source projects or side-hustles involving **Vue.js** or **DevOps**.
 - 💬 **Ask me about:** Transitioning from student to engineer, or why I enjoy working with legacy and modern stacks simultaneously.
 
@@ -34,9 +34,9 @@ I am a strategic-thinking Software Engineer with a mastery of enterprise ecosyst
 
 ---
 
-### � Professional Highlights
+###  Professional Highlights
 - **Enterprise ERP System:** Re-architected financial tracking modules using ColdFusion and Vue.js.
-- **Logistics Mobile Solution:** Built a high-performance asset tracking app with Ionic and Taffy REST APIs.
+- **Logistics Web Mobile Solution:** Built a high-performance asset tracking app with Ionic and Taffy REST APIs.
 - **Automated Reporting:** Optimized complex data delivery using Jasper Reports integration.
 
 ---

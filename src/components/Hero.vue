@@ -19,7 +19,7 @@ import { ArrowRight, Sparkles } from 'lucide-vue-next';
       </h1>
 
       <p class="hero-subtitle">
-        Full-Stack Software Engineer specializing in Enterprise Solutions, Mobile Development, and Scalable Web Architecture.
+        Full-Stack Software Engineer specializing in Enterprise Solutions, Responsive Web Solutions, and Scalable Web Architecture.
       </p>
 
       <div class="hero-actions">

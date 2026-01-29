@@ -4,7 +4,7 @@ import { Layout, Server, Smartphone, Database, Cpu } from 'lucide-vue-next';
 const skills = [
   { name: 'Frontend & UI', icon: Layout, items: ['Vue.js', 'Adobe ColdFusion', 'Ionic Framework', 'FW/1', 'TypeScript', 'JavaScript', 'HTML5/CSS', 'Bootstrap', 'WordPress'] },
   { name: 'Backend Mastery', icon: Server, items: ['Node.js', 'PHP', 'Laravel', 'Adobe ColdFusion', 'C#', 'Java', 'FW/1', 'Taffy'] },
-  { name: 'Mobile Development', icon: Smartphone, items: ['Android App Dev', 'iOS App Dev', 'Ionic Framework'] },
+  { name: 'Web Mobile & Hybrid', icon: Smartphone, items: ['Ionic Framework', 'Responsive Design', 'Web-first Mobile'] },
   { name: 'Cloud & Infrastructure', icon: Database, items: ['SQL', 'MariaDB', 'Jasper Reports'] },
   { name: 'Software Engineering', icon: Cpu, items: ['System Analysis & Design', 'Software Project Management'] }
 ];

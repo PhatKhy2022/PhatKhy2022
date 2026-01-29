@@ -4,7 +4,7 @@ const experiences = [
     role: 'Software Engineer',
     company: 'Sourceamax',
     period: 'Current / Recent',
-    desc: 'Developing enterprise-level applications using Adobe ColdFusion (FW/1, Taffy), Node.js, and Vue.js. Implementing Jasper Reports and managing cross-platform mobile solutions with Ionic.'
+    desc: 'Developing enterprise-level applications using Adobe ColdFusion (FW/1, Taffy), Node.js, and Vue.js. Implementing Jasper Reports and managing web mobile solutions with Ionic.'
   },
   {
     role: "Associate's Degree in Web Development",
@@ -15,8 +15,8 @@ const experiences = [
   {
     role: 'Bachelor of Computer Science',
     company: 'Asia Euro University (University)',
-    period: 'Academic Foundation',
-    desc: 'Studied System Analysis & Design, Software Project Management, and Mobile Development (Android/iOS). Mastered core fundamentals in Java, HTML5, and CSS.'
+    period: '2023 - 2025',
+    desc: 'Studied System Analysis & Design, Software Project Management, and Introduction to Mobile Development. Mastered core fundamentals in Java, HTML5, and CSS.'
   }
 ];
 </script>
@@ -33,7 +33,7 @@ const experiences = [
 
         <div v-for="(exp, index) in experiences" :key="index" class="timeline-item">
           <div class="timeline-dot"></div>
-          
+
           <div class="glass exp-card">
             <div class="exp-header">
               <div class="role-group">
@@ -124,7 +124,7 @@ const experiences = [
 .period-badge {
   font-size: 0.85rem;
   color: var(--text-secondary);
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 0.3rem 1rem;
   border-radius: 100px;
   border: 1px solid var(--border-color);

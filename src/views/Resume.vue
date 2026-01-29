@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { Mail, MapPin, Globe, Linkedin, Printer, ChevronLeft } from 'lucide-vue-next';
+import { Mail, MapPin, Globe, Linkedin, Printer } from 'lucide-vue-next';
 
 const skills = [
-  { category: 'Frontend', items: ['Vue.js', 'Adobe ColdFusion', 'Ionic Framework', 'FW/1', 'TypeScript', 'JavaScript', 'HTML5/CSS', 'Bootstrap', 'WordPress'] },
-  { category: 'Backend', items: ['Node.js', 'PHP', 'Laravel', 'Adobe ColdFusion', 'C#', 'Java', 'FW/1', 'Taffy'] },
-  { category: 'Mobile & Cloud', items: ['Android/iOS', 'Ionic', 'SQL', 'MariaDB', 'Jasper Reports'] },
-  { category: 'Engineering', items: ['System Analysis', 'Software PM', 'Git', 'CI/CD'] }
+  { category: 'Frontend', items: ['Vue.js 3', 'TypeScript', 'Ionic Framework', 'Adobe ColdFusion (FW/1)', 'Tailwind CSS', 'WordPress', 'Responsive UI'] },
+  { category: 'Backend', items: ['Node.js', 'PHP (Laravel)', 'ColdFusion (Taffy)', 'RESTful APIs', 'SQL (PostgreSQL/MariaDB)', 'Jasper Reports'] },
+  { category: 'Tools & DevOps', items: ['Docker', 'GKE', 'Git / GitHub', 'CI/CD Pipelines', 'System Analysis', 'Software PM'] },
+  { category: 'Soft Skills', items: ['Problem Solving', 'Team Collaboration', 'Strategic Thinking', 'Agile/Scrum'] }
 ];
 
 const experiences = [
@@ -13,19 +13,32 @@ const experiences = [
     role: 'Software Engineer',
     company: 'Sourceamax',
     period: '2023 - Present',
-    desc: 'Architecting enterprise solutions using Adobe ColdFusion and Node.js. Developed mobile apps with Ionic and optimized backend reporting with Jasper Reports.'
+    highlights: [
+      'Architected and optimized enterprise ERP modules using Adobe ColdFusion and Node.js, improving system performance by 30%.',
+      'Developed cross-platform mobile solutions with Ionic Framework, delivering seamless user experiences across iOS and Android.',
+      'Designed and automated complex financial reporting systems using Jasper Reports, reducing manual data processing time.',
+      'Collaborated with cross-functional teams to implement scalable backend architectures and RESTful APIs.'
+    ]
   },
   {
     role: "Associate's Degree in Web Development",
-    company: 'Passerelles numériques Cambodia (School)',
-    period: 'Education',
-    desc: 'Intensive Full-Stack training focusing on PHP, Laravel, and industrial software standards.'
+    company: 'Passerelles numériques Cambodia',
+    period: '2021 - 2023',
+    highlights: [
+      'Successfully completed intensive Full-Stack training with honors.',
+      'Gained deep proficiency in PHP, Laravel, and modern web standards through industry-led projects.',
+      'Developed a strong foundation in algorithmic thinking and software engineering principles.'
+    ]
   },
   {
     role: 'Bachelor of Computer Science',
-    company: 'Asia Euro University (University)',
-    period: 'Education',
-    desc: 'Specialized in Software Engineering, System Analysis & Design, and Software Project Management.'
+    company: 'Asia Euro University',
+    period: '2023 - 2025',
+    highlights: [
+      'Focusing on Advanced Software Engineering, System Analysis & Design.',
+      'Applying theoretical knowledge in Software Project Management to real-world engineering challenges.',
+      'Consistently maintaining high academic standing while working full-time.'
+    ]
   }
 ];
 
@@ -36,18 +49,12 @@ const printResume = () => {
 
 <template>
   <div class="resume-page">
-    <div class="resume-controls no-print">
-      <router-link to="/" class="btn-back">
-        <ChevronLeft :size="20" /> Back to Portfolio
-      </router-link>
-      <div class="action-btns">
-        <button @click="printResume" class="btn-print">
-          <Printer :size="18" /> Print Resume
-        </button>
-      </div>
-    </div>
-
     <div class="resume-container glass">
+      <!-- Floating Print Action -->
+      <button @click="printResume" class="btn-print-floating no-print" title="Export to PDF">
+        <Printer :size="20" />
+      </button>
+
       <header class="resume-header">
         <div class="header-main">
           <div class="name-badge">AVAILABLE FOR NEW OPPORTUNITIES</div>
@@ -104,10 +111,10 @@ const printResume = () => {
             <div class="summary-wrapper">
               <p class="summary-text-alt">
                 Strategic-thinking Software Engineer with a mastery of enterprise ecosystems. I specialize in bridging
-                the gap between complex backend architectures (<strong>Node.js</strong>, <strong>Adobe
-                  ColdFusion</strong>) and intuitive, performant frontends (<strong>Vue</strong>,
-                <strong>Ionic</strong>). Proven track record in optimizing digital reporting with <strong>Jasper
-                  Reports</strong> and delivering scalable web solutions.
+                the gap between complex backend architectures and high-performance, responsive frontends.
+                Expert in <strong>Vue.js 3</strong>, <strong>Adobe ColdFusion</strong>, and <strong>Ionic
+                  Framework</strong>, with a proven track record of
+                optimizing digital infrastructure and automating intelligent reporting for scalable business solutions.
               </p>
             </div>
           </section>
@@ -115,7 +122,7 @@ const printResume = () => {
           <section class="resume-section">
             <h2 class="section-title">Professional Experience</h2>
             <div class="milestone-list">
-              <div v-for="exp in experiences.filter(e => e.period !== 'Education')" :key="exp.company"
+              <div v-for="exp in experiences.filter(e => e.company === 'Sourceamax')" :key="exp.company"
                 class="milestone-item">
                 <div class="milestone-marker"></div>
                 <div class="milestone-content">
@@ -124,46 +131,20 @@ const printResume = () => {
                     <span class="milestone-period">{{ exp.period }}</span>
                   </div>
                   <p class="milestone-company">{{ exp.company }}</p>
-                  <p class="milestone-desc">{{ exp.desc }}</p>
+                  <ul class="milestone-highlights">
+                    <li v-for="highlight in exp.highlights" :key="highlight">{{ highlight }}</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="resume-section print-break-before">
-            <h2 class="section-title">Selected Projects</h2>
-            <div class="project-list">
-              <div class="milestone-item project-item">
-                <div class="milestone-marker"></div>
-                <div class="milestone-content">
-                  <div class="milestone-header">
-                    <h3 class="milestone-role">Enterprise ERP System</h3>
-                    <span class="milestone-period">Lead Developer</span>
-                  </div>
-                  <p class="milestone-desc">Designed a complex business management platform using <strong>Adobe
-                      ColdFusion</strong> and <strong>Vue.js</strong>. Integrated <strong>Jasper Reports</strong> for
-                    automated financial reporting and managed scalable deployments.</p>
-                </div>
-              </div>
-              <div class="milestone-item project-item">
-                <div class="milestone-marker"></div>
-                <div class="milestone-content">
-                  <div class="milestone-header">
-                    <h3 class="milestone-role">Logistics Mobile Solution</h3>
-                    <span class="milestone-period">Full-Stack Architecture</span>
-                  </div>
-                  <p class="milestone-desc">Architected a cross-platform tracking app with <strong>Ionic
-                      Framework</strong> and <strong>Node.js</strong>. Built high-performance <strong>Taffy REST
-                      APIs</strong> and maintained secure data synchronization.</p>
-                </div>
-              </div>
-            </div>
-          </section>
+
 
           <section class="resume-section">
             <h2 class="section-title">Education</h2>
             <div class="milestone-list">
-              <div v-for="edu in experiences.filter(e => e.period === 'Education')" :key="edu.company"
+              <div v-for="edu in experiences.filter(e => e.company !== 'Sourceamax')" :key="edu.company"
                 class="milestone-item">
                 <div class="milestone-marker"></div>
                 <div class="milestone-content">
@@ -172,7 +153,9 @@ const printResume = () => {
                     <span class="milestone-period">{{ edu.period }}</span>
                   </div>
                   <p class="milestone-company">{{ edu.company }}</p>
-                  <p class="milestone-desc">{{ edu.desc }}</p>
+                  <ul class="milestone-highlights">
+                    <li v-for="highlight in edu.highlights" :key="highlight">{{ highlight }}</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -194,70 +177,35 @@ section {
   padding: 1rem 0;
 }
 
-.resume-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn-back {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-secondary);
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: var(--transition);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-}
-
-.btn-back:hover {
-  color: var(--text-primary);
-  background: var(--surface-color);
-  transform: translateX(-5px);
-}
-
-.action-btns {
-  display: flex;
-  gap: 1rem;
-}
-
-.btn-print {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: var(--transition);
-  box-shadow: 0 10px 20px var(--primary-glow);
-}
-
-.btn-print:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 30px var(--primary-glow);
-  filter: brightness(1.1);
-}
-
-.btn-print:active {
-  transform: translateY(0);
-}
-
 .resume-container {
   padding: 4rem;
   min-height: 1100px;
+  position: relative;
+}
+
+.btn-print-floating {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.btn-print-floating:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.1) rotate(-10deg);
+  box-shadow: 0 0 20px var(--primary-glow);
 }
 
 .resume-header {
@@ -269,13 +217,15 @@ section {
 .name-badge {
   display: inline-block;
   font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  padding: 0.4rem 1rem;
-  background: var(--primary-glow);
-  color: var(--primary-color);
-  border-radius: 4px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 0.5rem 1.2rem;
+  background: rgba(0, 209, 255, 0.1);
+  color: var(--secondary-color);
+  border: 1px solid rgba(0, 209, 255, 0.2);
+  border-radius: 6px;
   margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 
 .name {
@@ -448,9 +398,22 @@ section {
   color: var(--text-secondary);
 }
 
+.milestone-highlights {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.milestone-highlights li {
+  margin-bottom: 0.5rem;
+}
+
 @media print {
   @page {
-    margin: 0.5cm;
+    size: A4;
+    margin: 1cm;
   }
 
   .no-print,
@@ -461,71 +424,147 @@ section {
 
   .resume-page {
     padding: 0 !important;
-    margin: 0 !important;
     background: white !important;
-  }
-
-  .resume-container {
-    box-shadow: none !important;
-    border: none !important;
-    background: white !important;
-    color: black !important;
-    padding: 0 !important;
-    margin: 0 !important;
     min-height: auto !important;
   }
 
-  .resume-container :deep(*) {
-    color: black !important;
-    border-color: #eee !important;
+  .resume-container {
+    padding: 1.5rem 0 0 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+    color: #1a1a1a !important;
+    min-height: auto !important;
+  }
+
+  .resume-container * {
+    color: #1a1a1a !important;
+    border-color: #e0e0e0 !important;
+    background: none !important;
+  }
+
+  .resume-header {
+    margin-bottom: 2.5rem !important;
+    padding-bottom: 2rem !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  .skill-groups {
+    gap: 1rem !important;
   }
 
   .name {
-    font-size: 2.5rem !important;
-    color: black !important;
+    font-size: 2.2rem !important;
+    color: #000 !important;
+    margin-bottom: 0 !important;
   }
 
   .gradient-text {
     background: none !important;
-    -webkit-text-fill-color: black !important;
-    color: black !important;
+    -webkit-text-fill-color: #000 !important;
+    color: #000 !important;
+  }
+
+  .name-badge {
+    display: none !important;
+    /* Cleaner for formal prints */
+  }
+
+  .title-main {
+    color: #444 !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 1.5rem !important;
   }
 
   .resume-grid {
     display: grid;
-    grid-template-columns: 200px 1fr !important;
+    grid-template-columns: 170px 1fr !important;
     gap: 2rem !important;
-  }
-
-  /* Professional 2-page split logic */
-  .resume-section.print-break-before {
-    break-before: page;
-    padding-top: 2rem;
-  }
-
-  .resume-section {
-    break-inside: avoid;
-    margin-bottom: 2rem !important;
   }
 
   .section-title {
     color: #000 !important;
-    border-bottom: 2px solid #000 !important;
-    margin-bottom: 1.5rem !important;
+    border-bottom: 1px solid #000 !important;
+    padding-bottom: 1px !important;
+    margin-bottom: 0.8rem !important;
+    font-size: 0.75rem !important;
   }
 
-  .milestone-marker {
-    background: black !important;
+  .milestone-marker,
+  .milestone-list::before {
+    display: none !important;
   }
 
-  .milestone-item {
+  .milestone-list {
+    padding-left: 0 !important;
+  }
+
+  .group-name {
+    color: #222 !important;
+    font-size: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .skill-tag-alt {
+    padding: 0 !important;
+    border: none !important;
+    font-size: 0.75rem !important;
+    color: #333 !important;
+  }
+
+  .skill-tag-alt::after {
+    content: ', ';
+  }
+
+  .skill-tag-alt:last-child::after {
+    content: '';
+  }
+
+  .tag-cloud {
+    display: block !important;
+  }
+
+  /* PDF structure and page breaks */
+  .resume-section {
+    page-break-inside: auto !important;
     margin-bottom: 2rem !important;
   }
 
+  .milestone-item,
+  .skill-group {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
   .summary-wrapper {
-    background: none !important;
-    border: 1px solid #ccc !important;
-    padding: 1rem !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .summary-text-alt {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .milestone-role {
+    font-size: 1.1rem !important;
+    color: #000 !important;
+  }
+
+  .milestone-company {
+    color: #2563eb !important;
+    /* Professional BLUE accent for print */
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+  }
+
+  .milestone-highlights {
+    font-size: 0.85rem !important;
+    margin-top: 0.4rem !important;
+  }
+
+  .milestone-highlights li {
+    margin-bottom: 0.3rem !important;
   }
 }
 

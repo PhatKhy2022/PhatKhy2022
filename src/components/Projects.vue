@@ -10,8 +10,8 @@ const projects = [
     tags: ['Adobe ColdFusion', 'Vue.js', 'Jasper Reports', 'SQL', 'MariaDB']
   },
   {
-    title: 'Logistics Mobile Solution',
-    desc: 'Cross-platform mobile application for real-time asset tracking and fleet management via Taffy REST APIs.',
+    title: 'Logistics Web Mobile Solution',
+    desc: 'Responsive web mobile application for real-time asset tracking and fleet management via Taffy REST APIs.',
     image: p2,
     tags: ['Ionic Framework', 'Node.js', 'Taffy']
   }
