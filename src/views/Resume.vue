@@ -49,7 +49,8 @@ const printResume = () => {
 
 <template>
   <div class="resume-page">
-    <div class="resume-container glass">
+    <div class="resume-container glass" v-motion :initial="{ opacity: 0, scale: 0.98, y: 20 }"
+      :enter="{ opacity: 1, scale: 1, y: 0, transition: { duration: 600 } }">
       <!-- Floating Print Action -->
       <button @click="printResume" class="btn-print-floating no-print" title="Export to PDF">
         <Printer :size="20" />

@@ -31,7 +31,8 @@ const experiences = [
       <div class="timeline">
         <div class="vertical-line"></div>
 
-        <div v-for="(exp, index) in experiences" :key="index" class="timeline-item">
+        <div v-for="(exp, index) in experiences" :key="index" class="timeline-item" v-motion
+          :initial="{ opacity: 0, x: -50 }" :visible-once="{ opacity: 1, x: 0, transition: { delay: index * 150 } }">
           <div class="timeline-dot"></div>
 
           <div class="glass exp-card">

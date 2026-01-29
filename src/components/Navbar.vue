@@ -7,13 +7,16 @@ const isOpen = ref(false);
 const navItems = [
   { name: 'About', href: '/#about' },
   { name: 'Projects', href: '/#projects' },
+  { name: 'Growth', href: '/#growth' },
+  { name: 'Impact', href: '/#impact' },
   { name: 'Experience', href: '/#experience' },
   { name: 'Contact', href: '/#contact' },
 ];
 </script>
 
 <template>
-  <nav class="glass nav-container">
+  <nav class="glass nav-container" v-motion :initial="{ opacity: 0, y: -20 }"
+    :enter="{ opacity: 1, y: 0, transition: { duration: 600 } }">
     <router-link to="/" class="logo gradient-text">
       KHY PHAT
     </router-link>
@@ -22,7 +25,7 @@ const navItems = [
       <a v-for="item in navItems" :key="item.name" :href="item.href" class="nav-link">
         {{ item.name }}
       </a>
-      
+
       <div class="nav-divider">
         <a href="https://github.com/PhatKhy2022" target="_blank" class="icon-link">
           <Github :size="20" />
@@ -110,6 +113,7 @@ const navItems = [
   .desktop-menu {
     display: none;
   }
+
   .mobile-toggle {
     display: block;
     cursor: pointer;

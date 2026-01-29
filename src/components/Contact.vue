@@ -6,10 +6,12 @@ import { Send, Mail, MapPin } from 'lucide-vue-next';
   <section id="contact">
     <div class="container">
       <div class="contact-grid">
-        <div class="contact-info">
+        <div class="contact-info" v-motion :initial="{ opacity: 0, x: -50 }"
+          :visible-once="{ opacity: 1, x: 0, transition: { duration: 600 } }">
           <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
           <p class="section-subtitle">
-            Have a project in mind or just want to say hi? Feel free to reach out. I'm always open to discussing new opportunities and creative ideas.
+            Have a project in mind or just want to say hi? Feel free to reach out. I'm always open to discussing new
+            opportunities and creative ideas.
           </p>
 
           <div class="info-list">
@@ -34,7 +36,8 @@ import { Send, Mail, MapPin } from 'lucide-vue-next';
           </div>
         </div>
 
-        <div class="glass contact-form-card">
+        <div class="glass contact-form-card" v-motion :initial="{ opacity: 0, x: 50 }"
+          :visible-once="{ opacity: 1, x: 0, transition: { duration: 600 } }">
           <form class="contact-form">
             <div class="form-group">
               <label class="form-label">Name</label>
@@ -49,7 +52,8 @@ import { Send, Mail, MapPin } from 'lucide-vue-next';
               <textarea rows="4" placeholder="Your message here..." class="form-input textarea"></textarea>
             </div>
             <button class="btn btn-primary btn-submit">
-              Send Message <Send :size="18" />
+              Send Message
+              <Send :size="18" />
             </button>
           </form>
         </div>

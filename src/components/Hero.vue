@@ -9,22 +9,28 @@ import { ArrowRight, Sparkles } from 'lucide-vue-next';
     <div class="blob blob-2"></div>
 
     <div class="container hero-content">
-      <div class="hero-badge">
+      <div class="hero-badge" v-motion :initial="{ opacity: 0, y: 20 }"
+        :enter="{ opacity: 1, y: 0, transition: { delay: 200 } }">
         <Sparkles :size="16" color="#FFD700" />
         <span>AVAILABLE FOR WORK</span>
       </div>
 
-      <h1 class="hero-title">
+      <h1 class="hero-title" v-motion :initial="{ opacity: 0, y: 30 }"
+        :enter="{ opacity: 1, y: 0, transition: { delay: 400 } }">
         Building <span class="gradient-text">Future-Ready</span> <br /> Digital Experiences.
       </h1>
 
-      <p class="hero-subtitle">
-        Full-Stack Software Engineer specializing in Enterprise Solutions, Responsive Web Solutions, and Scalable Web Architecture.
+      <p class="hero-subtitle" v-motion :initial="{ opacity: 0, y: 30 }"
+        :enter="{ opacity: 1, y: 0, transition: { delay: 600 } }">
+        Full-Stack Software Engineer specializing in Enterprise Solutions, Responsive Web Solutions, and Scalable Web
+        Architecture.
       </p>
 
-      <div class="hero-actions">
+      <div class="hero-actions" v-motion :initial="{ opacity: 0, y: 30 }"
+        :enter="{ opacity: 1, y: 0, transition: { delay: 800 } }">
         <button class="btn btn-primary">
-          View Projects <ArrowRight :size="20" />
+          View Projects
+          <ArrowRight :size="20" />
         </button>
         <router-link to="/resume" class="btn btn-outline">
           Resume
@@ -32,7 +38,8 @@ import { ArrowRight, Sparkles } from 'lucide-vue-next';
       </div>
 
       <!-- Floating Code Snippet -->
-      <div class="glass float code-card">
+      <div class="glass float code-card" v-motion :initial="{ opacity: 0, scale: 0.8 }"
+        :enter="{ opacity: 1, scale: 1, transition: { delay: 1000, type: 'spring' } }">
         <div class="code-header">
           <div class="dot dot-red"></div>
           <div class="dot dot-yellow"></div>
@@ -85,16 +92,35 @@ import { ArrowRight, Sparkles } from 'lucide-vue-next';
 }
 
 @keyframes float-blob-1 {
-  0% { transform: scale(1) translate(0, 0); }
-  33% { transform: scale(1.2) translate(100px, -50px); }
-  66% { transform: scale(0.8) translate(-50px, 50px); }
-  100% { transform: scale(1) translate(0, 0); }
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  33% {
+    transform: scale(1.2) translate(100px, -50px);
+  }
+
+  66% {
+    transform: scale(0.8) translate(-50px, 50px);
+  }
+
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
 }
 
 @keyframes float-blob-2 {
-  0% { transform: scale(1) translate(0, 0); }
-  50% { transform: scale(1.2) translate(-100px, 50px); }
-  100% { transform: scale(1) translate(0, 0); }
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.2) translate(-100px, 50px);
+  }
+
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
 }
 
 .hero-content {
@@ -192,9 +218,17 @@ import { ArrowRight, Sparkles } from 'lucide-vue-next';
   border-radius: 50%;
 }
 
-.dot-red { background: #FF5F56; }
-.dot-yellow { background: #FFBD2E; }
-.dot-green { background: #27C93F; }
+.dot-red {
+  background: #FF5F56;
+}
+
+.dot-yellow {
+  background: #FFBD2E;
+}
+
+.dot-green {
+  background: #27C93F;
+}
 
 .code-body {
   font-size: 0.9rem;
@@ -202,6 +236,11 @@ import { ArrowRight, Sparkles } from 'lucide-vue-next';
   font-family: 'Fira Code', monospace;
 }
 
-.keyword { color: #FF79C6; }
-.string { color: #F1FA8C; }
+.keyword {
+  color: #FF79C6;
+}
+
+.string {
+  color: #F1FA8C;
+}
 </style>

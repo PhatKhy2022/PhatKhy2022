@@ -29,7 +29,8 @@ const projects = [
       </div>
 
       <div class="projects-grid">
-        <div v-for="project in projects" :key="project.title" class="glass project-card">
+        <div v-for="(project, index) in projects" :key="project.title" class="glass project-card" v-motion
+          :initial="{ opacity: 0, y: 50 }" :visible-once="{ opacity: 1, y: 0, transition: { delay: index * 200 } }">
           <div class="project-image-wrapper">
             <img :src="project.image" :alt="project.title" class="project-img" />
           </div>
@@ -80,7 +81,7 @@ const projects = [
 
 .project-card:hover {
   transform: translateY(-15px);
-  border-color: rgba(255,255,255,0.3);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .project-image-wrapper {
@@ -112,7 +113,7 @@ const projects = [
 .project-tag {
   font-size: 0.7rem;
   padding: 0.2rem 0.6rem;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 4px;
   border: 1px solid var(--border-color);
   color: var(--secondary-color);
