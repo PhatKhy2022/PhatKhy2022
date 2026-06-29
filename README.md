@@ -49,7 +49,7 @@ I am a strategic-thinking Software Engineer with a mastery of enterprise ecosyst
 ---
 
 ### 🌐 My Portfolio
-This repository contains the source code for my professional portfolio. Feel free to explore the code or visit the live versions:
+This repository contains the source code for my professional portfolio. Feel free to explore the code or visit the live version:
 
 🔗 **[Live Portfolio](https://khy-phat-portfolio.vercel.app)**
 📄 **[Digital Resume](https://khy-phat-portfolio.vercel.app/resume)**
