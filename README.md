@@ -63,3 +63,5 @@ This repository contains the source code for my professional portfolio. Feel fre
 
 ---
 *Created with ❤️ by Khy Phat*
+https://docs.google.com/document/d/1VQK0JLJd4ldST73XpU4Efa45Jx22Cty96OunM1TfvSE/edit?tab=t.0
+
